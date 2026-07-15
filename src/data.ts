@@ -59,7 +59,7 @@ export const workouts: Workout[] = [
     subtitle: 'Peito, ombros e tríceps',
     duration: 48,
     level: 'Intermediário',
-    accent: 'linear-gradient(135deg, #8d6a56 0%, #30241d 100%)',
+    accent: 'linear-gradient(135deg, #bd151a 0%, #6b090c 100%)',
     exercises: [
       {
         id: 'bench',
@@ -110,7 +110,7 @@ export const workouts: Workout[] = [
     subtitle: 'Costas e bíceps',
     duration: 50,
     level: 'Intermediário',
-    accent: 'linear-gradient(135deg, #5b5148 0%, #201b17 100%)',
+    accent: 'linear-gradient(135deg, #bd151a 0%, #6b090c 100%)',
     exercises: [
       {
         id: 'pulldown',
@@ -161,7 +161,7 @@ export const workouts: Workout[] = [
     subtitle: 'Full body e condicionamento',
     duration: 42,
     level: 'Moderado',
-    accent: 'linear-gradient(135deg, #ca251e 0%, #39211d 100%)',
+    accent: 'linear-gradient(135deg, #bd151a 0%, #6b090c 100%)',
     exercises: [
       {
         id: 'goblet',
@@ -253,6 +253,7 @@ export const promotions: Promotion[] = [
     price: 'R$ 119,90',
     coupon: 'FIT20',
     endDate: 'Até 20/07',
+    image: '/Whey.jpg',
   },
   {
     id: 'p2',
@@ -264,6 +265,7 @@ export const promotions: Promotion[] = [
     price: 'R$ 79,90',
     coupon: 'CREATINA',
     endDate: 'Até 25/07',
+    image: '/Creatina.jpg',
   },
   {
     id: 'p3',

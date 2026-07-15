@@ -42,7 +42,6 @@ export function HomePage({
           <h2>{nextWorkout.subtitle}</h2>
           <div className="hero-workout__meta">
             <span><Timer size={15} /> {nextWorkout.duration} min</span>
-            <span><MapPin size={15} /> Unidade Centro</span>
           </div>
         </div>
         <button className="primary-button primary-button--light" onClick={() => onOpenWorkout(nextWorkout)}>
@@ -72,7 +71,7 @@ export function HomePage({
           <button className="text-button">Detalhes <ChevronRight size={16} /></button>
         </div>
         <article className="progress-card">
-          <ProgressRing value={completedCount * 25} label="concluído" />
+          <ProgressRing value={completedCount * 25} label="" />
           <div className="progress-card__copy">
             <strong>Você está no caminho certo!</strong>
             <p>Complete mais {Math.max(0, 4 - completedCount)} treino(s) para alcançar sua meta da semana.</p>

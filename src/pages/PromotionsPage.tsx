@@ -1,4 +1,4 @@
-import { Check, Copy, Gift, ShoppingBag, Sparkles, Ticket } from 'lucide-react';
+import { Check, Copy, Gift, Sparkles, Ticket } from 'lucide-react';
 import type { Promotion } from '../types';
 
 type Props = {
@@ -30,7 +30,10 @@ export function PromotionsPage({ promotions, enteredRaffles, onCopy, onEnterRaff
         {promotions.filter((promo) => promo.kind === 'supplement').map((promo) => (
           <article key={promo.id} className="product-card">
             <div className="product-card__visual">
-              <ShoppingBag size={37} />
+              {promo.image
+                ? <img src={promo.image} alt={promo.title} className="product-card__img" />
+                : null
+              }
               <span>{promo.badge}</span>
             </div>
             <div className="product-card__body">

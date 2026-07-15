@@ -42,4 +42,5 @@ export type Promotion = {
   oldPrice?: string;
   coupon?: string;
   endDate: string;
+  image?: string;
 };

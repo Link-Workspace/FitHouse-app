@@ -1,4 +1,4 @@
-import { CalendarCheck, CheckCircle2, Clock3, CreditCard, Crown, QrCode, ShieldCheck } from 'lucide-react';
+import { ArrowRightLeft, CalendarCheck, CheckCircle2, ChevronRight, Clock3, CreditCard, Crown, QrCode, ShieldCheck, Snowflake, XCircle } from 'lucide-react';
 
 export function PlanPage({ onToast }: { onToast: (message: string) => void }) {
   return (
@@ -17,7 +17,7 @@ export function PlanPage({ onToast }: { onToast: (message: string) => void }) {
         </div>
         <div className="membership-card__plan">
           <span>PLANO</span>
-          <strong>PREMIUM</strong>
+          <strong>Estudante</strong>
           <small>Acesso completo</small>
         </div>
         <div className="membership-card__footer">
@@ -50,16 +50,48 @@ export function PlanPage({ onToast }: { onToast: (message: string) => void }) {
         </div>
       </section>
 
-      <section className="section-block section-block--last">
+      <section className="section-block">
         <div className="section-heading">
           <div><span className="eyebrow">Financeiro</span><h2>Próximo pagamento</h2></div>
         </div>
         <article className="payment-card">
           <div className="payment-card__icon"><CreditCard size={21} /></div>
-          <div><span>Mensalidade Premium</span><strong>R$ 129,90</strong><small>Vencimento em 12/08/2026</small></div>
+          <div><span>Mensalidade Estudante</span><strong>R$ 129,90</strong><small>Vencimento em 12/08/2026</small></div>
           <div className="payment-status"><CheckCircle2 size={16} /> Em dia</div>
         </article>
         <button className="secondary-button" onClick={() => onToast('Histórico financeiro aberto em modo demonstrativo.')}>Ver histórico de pagamentos</button>
+      </section>
+
+      <section className="section-block section-block--last">
+        <div className="section-heading">
+          <div><span className="eyebrow">Gerenciar</span><h2>Seu plano</h2></div>
+        </div>
+        <div className="plan-actions-card">
+          <button className="plan-action-row" onClick={() => onToast('Solicitação de alteração de plano enviada. Nossa equipe entrará em contato em breve.')}>
+            <div className="plan-action-row__icon plan-action-row__icon--neutral"><ArrowRightLeft size={18} /></div>
+            <div>
+              <strong>Alterar plano</strong>
+              <span>Mude para um plano diferente</span>
+            </div>
+            <ChevronRight size={16} className="plan-action-row__chevron" />
+          </button>
+          <button className="plan-action-row" onClick={() => onToast('Solicitação de congelamento enviada. Nossa equipe entrará em contato em breve.')}>
+            <div className="plan-action-row__icon plan-action-row__icon--blue"><Snowflake size={18} /></div>
+            <div>
+              <strong>Congelar plano</strong>
+              <span>Pause temporariamente seu acesso</span>
+            </div>
+            <ChevronRight size={16} className="plan-action-row__chevron" />
+          </button>
+          <button className="plan-action-row plan-action-row--danger" onClick={() => onToast('Solicitação de cancelamento recebida. Nossa equipe entrará em contato em breve.')}>
+            <div className="plan-action-row__icon plan-action-row__icon--red"><XCircle size={18} /></div>
+            <div>
+              <strong>Cancelar plano</strong>
+              <span>Encerre sua assinatura</span>
+            </div>
+            <ChevronRight size={16} className="plan-action-row__chevron" />
+          </button>
+        </div>
       </section>
     </div>
   );
