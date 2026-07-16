@@ -1,13 +1,13 @@
 {
   "name": "Fit House Academia",
   "short_name": "Fit House",
-  "start_url": "/",
+  "start_url": "/FitHouse-app/",
   "display": "standalone",
   "background_color": "#0a0908",
   "theme_color": "#b80f13",
   "icons": [
     {
-      "src": "/fit-house-logo.png",
+      "src": "fit-house-logo.png",
       "sizes": "910x910",
       "type": "image/png",
       "purpose": "any maskable"

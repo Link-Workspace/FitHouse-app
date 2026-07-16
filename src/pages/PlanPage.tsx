@@ -12,7 +12,7 @@ export function PlanPage({ onToast }: { onToast: (message: string) => void }) {
       <section className="membership-card">
         <div className="membership-card__glow" />
         <div className="membership-card__brand">
-          <img src="/fit-house-logo.png" alt="Fit House" />
+          <img src={`${import.meta.env.BASE_URL}fit-house-logo.png`} alt="Fit House" />
           <span>FIT HOUSE</span>
         </div>
         <div className="membership-card__plan">

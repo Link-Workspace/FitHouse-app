@@ -174,7 +174,7 @@ function App() {
       <Modal open={Boolean(selectedExercise)} onClose={() => setSelectedExercise(null)} title={selectedExercise?.name} wide>
         {selectedExercise && (
           <div className="exercise-detail">
-            <video src={selectedExercise.video} controls autoPlay loop playsInline poster="/fit-house-logo.png" />
+            <video src={selectedExercise.video} controls autoPlay loop playsInline poster={`${import.meta.env.BASE_URL}fit-house-logo.png`} />
             <div className="exercise-detail__meta">
               <div><span>Séries</span><strong>{selectedExercise.sets}</strong></div>
               <div><span>Repetições</span><strong>{selectedExercise.reps}</strong></div>
@@ -235,7 +235,7 @@ function LoginScreen({ onLogin }: { onLogin: () => void }) {
       <div className="login-screen__glow login-screen__glow--one" />
       <div className="login-screen__glow login-screen__glow--two" />
       <section className="login-card">
-        <div className="login-logo"><img src="/fit-house-logo.png" alt="Fit House Academia" /></div>
+        <div className="login-logo"><img src={`${import.meta.env.BASE_URL}fit-house-logo.png`} alt="Fit House Academia" /></div>
         <div className="login-copy"><span>ÁREA DO ALUNO</span><h1>Seu treino, sua evolução.</h1><p>Acompanhe sua rotina e aproveite tudo o que a Fit House oferece.</p></div>
         <form onSubmit={(event) => { event.preventDefault(); onLogin(); }}>
           <label>E-mail</label>
