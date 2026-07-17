@@ -253,7 +253,7 @@ export const promotions: Promotion[] = [
     price: 'R$ 119,90',
     coupon: 'FIT20',
     endDate: 'Até 20/07',
-    image: '/Whey.jpg',
+    image: `${import.meta.env.BASE_URL}Whey.jpg`,
   },
   {
     id: 'p2',
@@ -265,7 +265,7 @@ export const promotions: Promotion[] = [
     price: 'R$ 79,90',
     coupon: 'CREATINA',
     endDate: 'Até 25/07',
-    image: '/Creatina.jpg',
+    image: `${import.meta.env.BASE_URL}Creatina.jpg`,
   },
   {
     id: 'p3',
